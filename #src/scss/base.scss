@@ -39,12 +39,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	min-height: 100%;
 }
 .page {
-	position: fixed;
-	top: 0;
-	left: 0;
+	// position: fixed;
+	// top: 0;
+	// left: 0;
+	// overflow: hidden;
+
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
 	background-color: #000;
 
 
@@ -71,14 +72,24 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	}
 }
 .screen {
-	flex: 1 0 100%;
+	// flex: 1 0 100%;
+	height: 100vh;
 	position: relative;
 	z-index: 3;
+
 }
 .container {
-  max-width: 1480px;
+	max-width: 1480px;
+	width: 100%;
   padding: 0 15px;
 	margin: 0 auto;
 	position: relative;
 	min-height: 100%;
+
+	@media (max-width: 1440px) {
+		max-width: 1330px;
+	}
+	@media (max-width: 1366px) {
+		max-width: 1210px;
+	}
 }
