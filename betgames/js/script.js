@@ -19,6 +19,16 @@
 //   observeParents: true,
 // });
 
+const mobMenuTrigger = document.querySelectorAll('.burger');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+mobMenuTrigger.forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    document.body.classList.toggle('lock');
+  });
+})
+
 
 
 
