@@ -1736,7 +1736,7 @@ h6 {
     min-height: 280px;
   }
 
-  .table__column:first-child {
+  .table__column {
     border-right: none;
   }
 
@@ -1757,6 +1757,7 @@ h6 {
     -webkit-flex: 0 1 100%;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
+    border-right: none;
   }
 
   .table__column_2 .table__column-head-points {

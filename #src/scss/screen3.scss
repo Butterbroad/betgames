@@ -111,10 +111,10 @@
       }
     }
     @media (max-width: 1024px) {
-      &:first-child {
-        border-right: none;
-      }
       min-height: 280px;
+    }
+    @media (max-width: 1024px) {
+      border-right: none;
     }
     // .table__column_1
 
@@ -208,6 +208,7 @@
       }
       @media (max-width: 1024px) {
         flex: 0 1 100%;
+        border-right: none;
       }
     }
 

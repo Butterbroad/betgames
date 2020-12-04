@@ -29,6 +29,13 @@ mobMenuTrigger.forEach(trigger => {
   });
 })
 
+const mobileMenuLinks = document.querySelectorAll('.menu__list-link_mob');
+mobileMenuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    document.body.classList.remove('lock');
+  });
+});
 
 //links for mobiles
 const isMobile = () => {
@@ -60,6 +67,8 @@ mobLinks.forEach(link => {
   let newLink = isMobile() ? `https://m.${linkArray[1]}` : linkHref;
   link.setAttribute('href', newLink);
 });
+
+
 
 
 

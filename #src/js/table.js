@@ -12,7 +12,6 @@ let data = fetch(url)
     tableOne(item);
     tableTwo(item);
     tableThree(item);
-    console.log(item)
   });
 
 //table 1

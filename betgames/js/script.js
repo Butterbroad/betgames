@@ -29,6 +29,13 @@ mobMenuTrigger.forEach(trigger => {
   });
 })
 
+const mobileMenuLinks = document.querySelectorAll('.menu__list-link_mob');
+mobileMenuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    document.body.classList.remove('lock');
+  });
+});
 
 //links for mobiles
 const isMobile = () => {
@@ -74,6 +81,8 @@ mobLinks.forEach(link => {
 
 
 
+
+
 const url = 'https://maxline.by/api/TvBetLanding/getUsersForLanding?cors=1';
 const table = document.querySelector('.table');
 let data = fetch(url)
@@ -88,7 +97,6 @@ let data = fetch(url)
     tableOne(item);
     tableTwo(item);
     tableThree(item);
-    console.log(item)
   });
 
 //table 1
