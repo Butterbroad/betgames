@@ -82,7 +82,6 @@ mobLinks.forEach(link => {
 
 
 
-
 const url = 'https://maxline.by/api/TvBetLanding/getUsersForLanding?cors=1';
 const table = document.querySelector('.table');
 let data = fetch(url)

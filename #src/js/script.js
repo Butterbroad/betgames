@@ -82,6 +82,5 @@ mobLinks.forEach(link => {
 
 
 
-
 @@include('table.js');
 @@include('webpSupport.js');
