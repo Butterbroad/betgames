@@ -113,7 +113,7 @@
     @media (max-width: 1024px) {
       min-height: 280px;
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 640px) {
       border-right: none;
     }
     // .table__column_1
@@ -226,7 +226,6 @@
         &:nth-child(odd) {
           background: #212121;
         }
-
       }
       .table__column-head-place {
         flex: 0 1 108px;

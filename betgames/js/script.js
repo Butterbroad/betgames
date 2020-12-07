@@ -1,3 +1,5 @@
+'use strict'
+
 // const pageSlider = new Swiper('.page', {
 //   wrapperClass: 'page__wrapper',
 //   slideClass: 'page__screen',
@@ -19,6 +21,7 @@
 //   observeParents: true,
 // });
 
+//mobile menu
 const mobMenuTrigger = document.querySelectorAll('.burger');
 const mobileMenu = document.querySelector('.mobile-menu');
 
@@ -68,7 +71,34 @@ mobLinks.forEach(link => {
   link.setAttribute('href', newLink);
 });
 
+//modal
+const modalTrigger = document.querySelector('.screen-one__info-btn');
+const modal = document.querySelector('.modal');
 
+function toggleModal() {
+  modal.classList.toggle('active');
+  document.body.classList.toggle('lock');
+
+  const modalClose = document.querySelector('.modal-info__close');
+  modalClose.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+}
+
+modalTrigger.addEventListener('click', (e) => {
+  e.stopPropagation();
+  toggleModal();
+});
+
+document.addEventListener('click', e => {
+  let target = e.target;
+  let isModal = target == modal;
+  let isTrigger = target == modalTrigger;
+  let menuIsActive = modal.classList.contains('active');
+  if (isModal && !isTrigger && menuIsActive) {
+    toggleModal();
+  }
+});
 
 
 
